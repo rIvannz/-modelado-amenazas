@@ -1,0 +1,39 @@
+{
+  "version": "2.6.0",
+  "summary": {
+    "title": "Modelo de Amenazas / Sistema de Biblioteca",
+    "owner": "Programación Segura",
+    "description": "El sitio web de la biblioteca universitaria es la primera implementación de un sitio web para brindar servicios en línea a los bibliotecarios y usuarios de la biblioteca (estudiantes y personal universitario). Como esta es la primera implementación del sitio web, la funcionalidad será limitada. Serán tres usuario de la aplicación:\n1. Estudiantes\n2. Personal\n3. Bibliotecarios\n\nEl personal y los estudiantes podrán iniciar sesión y buscar libros, y los miembros del personal podrán solicitar libros. Los bibliotecarios podrán iniciar sesión, agregar libros, agregar usuarios y buscar libros.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Rodrigo Ivan Ahumada Rodriguez"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD_InicioSesionUsuario",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.0",
+        "cells": []
+      },
+      {
+        "id": 1,
+        "title": "DFD_SitioWebBiblioteca",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 2,
+    "reviewer": "Guillermo Humberto Vera Amaro",
+    "threatTop": 0
+  }
+}
