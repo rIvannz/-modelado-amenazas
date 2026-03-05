@@ -42,6 +42,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -125,7 +126,6 @@
               ]
             },
             "id": "199fe598-f4f7-4e80-9045-3a4627b9fc5d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Proceso de Login",
@@ -184,6 +184,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -267,7 +268,6 @@
               ]
             },
             "id": "04f76db8-5d3b-4712-9ee0-02dde6cdb641",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Controlador Web",
@@ -326,6 +326,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -409,7 +410,6 @@
               ]
             },
             "id": "ec905c77-710e-4227-8da1-8546454a0d6f",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Usuarios",
@@ -1021,6 +1021,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1104,7 +1105,6 @@
               ]
             },
             "id": "22a52c9e-d07e-4e30-94a1-1bc6628b8817",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Páginas web en disco",
@@ -1167,6 +1167,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1250,7 +1251,6 @@
               ]
             },
             "id": "5bb8c2da-6526-46cd-ae50-15e470efe1c1",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
