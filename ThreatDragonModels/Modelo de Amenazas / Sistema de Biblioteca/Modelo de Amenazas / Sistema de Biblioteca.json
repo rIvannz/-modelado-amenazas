@@ -655,7 +655,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Vistas",
-              "description": "",
+              "description": "Páginas web leídas desde disco duro",
               "outOfScope": true,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -678,16 +678,6 @@
             "target": {
               "cell": "04f76db8-5d3b-4712-9ee0-02dde6cdb641",
               "port": "fb05baef-c991-49f7-80ab-e80f56fb3517"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             },
             "vertices": []
           },
@@ -773,17 +763,7 @@
                 "x": 700,
                 "y": 160
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
@@ -806,7 +786,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "UsuarioAutenticado\nResultado",
-              "description": "",
+              "description": "Este flujo de datos representa una acción dentro del controlador",
               "outOfScope": true,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -833,6 +813,10 @@
             "vertices": [
               {
                 "x": 640,
+                "y": 320
+              },
+              {
+                "x": 590,
                 "y": 320
               }
             ]
@@ -892,7 +876,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Usuario Autenticado\nSQL Query",
-              "description": "",
+              "description": "Instrucciones SQL Query enviadas hacia la base de datos",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -901,8 +885,27 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "4549831e-9aca-49e9-be3a-379adcfcbbe6",
+                  "title": "Ataque Man-in-the-Middle",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podria interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (poco probable ya que el flujo se realiza a través de una red privada).",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de la base de datos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Usuario Autenticado\nSQL Query"
@@ -944,7 +947,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "UsuarioAutenticado\nSQL Query Resultado",
-              "description": "",
+              "description": "Instrucciones de SQL hacia la base de datos",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -953,8 +956,27 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "a702afca-8eaf-495c-9615-1ef11292b415",
+                  "title": "Ataque Man-in-the-Middle",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podria interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (poco probable ya que el flujo se realiza a través de una red privada).",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de la base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "UsuarioAutenticado\nSQL Query Resultado"
@@ -973,7 +995,17 @@
                 "x": 1100,
                 "y": 260
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1279,6 +1311,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 8
+    "threatTop": 10
   }
 }
